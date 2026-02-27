@@ -1,0 +1,50 @@
+---
+const steps = [
+  {
+    num: '1',
+    title: 'Discovery Call',
+    desc: 'We start with a focused conversation about your business, workflows, and goals. No pitch, no pressure. You walk away with a clear picture of what we can build together — and exactly what to expect before any work begins.',
+    duration: '60 minutes · Free',
+  },
+  {
+    num: '2',
+    title: 'Setup & Configure',
+    desc: 'I deploy OpenClaw on your machine or a VPS, connect your tools — email, calendar, Notion, WhatsApp — and configure your agent\'s personality, automations, and workflows. You receive a written roadmap and prompt package tailored specifically to your business.',
+    duration: '90-minute session',
+  },
+  {
+    num: '3',
+    title: 'Training & Launch',
+    desc: 'Hands-on walkthrough so you know exactly how to get the most from your assistant. Then we go live and refine until it runs like a senior team member. Ongoing support available.',
+    duration: 'Go live day',
+  },
+];
+---
+
+<section class="section-pad border-t border-white/5">
+  <div class="container-md">
+    <p class="text-accent text-sm font-medium tracking-widest uppercase mb-4">The Process</p>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-16 max-w-2xl">
+      From zero to running assistant in 3 steps.
+    </h2>
+
+    <div class="space-y-0">
+      {steps.map((step, i) => (
+        <div class={`flex gap-8 py-10 ${i < steps.length - 1 ? 'border-b border-white/5' : ''}`}>
+          <!-- Number -->
+          <div class="flex-shrink-0 w-12 h-12 rounded-full border border-accent/40 flex items-center justify-center text-accent font-bold text-lg">
+            {step.num}
+          </div>
+          <!-- Content -->
+          <div class="flex-1 pt-2">
+            <div class="flex flex-wrap items-baseline gap-3 mb-3">
+              <h3 class="text-xl font-semibold">{step.title}</h3>
+              <span class="text-xs text-accent border border-accent/30 rounded-full px-3 py-0.5">{step.duration}</span>
+            </div>
+            <p class="text-neutral-400 leading-relaxed">{step.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+---
+const diy = [
+  '20–40 hours learning config files, integrations, and troubleshooting',
+  'Days lost to cryptic error messages and dead-end documentation',
+  'Wrong model choices that waste money or underperform',
+  'Security gaps you won\'t know about until it\'s too late',
+  'Trial and error on prompts that should just work',
+  'No one to ask when it breaks at 2am',
+];
+
+const expert = [
+  'Production-ready in 90 minutes, not weeks',
+  'Every integration done right the first time',
+  'Model selection optimized for your budget and use cases',
+  'Security locked down from day one',
+  'Battle-tested prompts tailored to your business',
+  'Someone who\'s solved every problem you\'ll hit',
+];
+---
+
+<section class="section-pad border-t border-white/5">
+  <div class="container-md">
+    <p class="text-accent text-sm font-medium tracking-widest uppercase mb-4">Why Consulting</p>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 max-w-2xl">
+      DIY vs. Expert Setup
+    </h2>
+    <p class="text-neutral-400 mb-14 max-w-xl">
+      OpenClaw is powerful. But the gap between "it's installed" and "it transforms how I work" is configuration, prompt engineering, and knowing what to connect.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- DIY -->
+      <div class="rounded-2xl border border-white/5 bg-surface2 p-8">
+        <h3 class="text-lg font-semibold mb-6 text-neutral-300">Doing It Yourself</h3>
+        <ul class="space-y-4">
+          {diy.map((item) => (
+            <li class="flex items-start gap-3 text-sm text-neutral-500">
+              <span class="text-neutral-600 mt-0.5 flex-shrink-0 text-base">✕</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Expert -->
+      <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
+        <h3 class="text-lg font-semibold mb-6 text-white">Working With Me</h3>
+        <ul class="space-y-4">
+          {expert.map((item) => (
+            <li class="flex items-start gap-3 text-sm text-neutral-300">
+              <span class="text-accent mt-0.5 flex-shrink-0 text-base">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pull quote -->
+    <p class="mt-10 text-center text-neutral-500 text-sm max-w-xl mx-auto">
+      The real cost isn't the consulting fee. It's the 40 hours you'll spend reinventing solutions I've already built.
+      <span class="text-neutral-300 font-medium"> Your time is worth more than that.</span>
+    </p>
+  </div>
+</section>

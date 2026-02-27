@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#0a0a0a] text-white font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    @apply text-neutral-400;
+  }
+  .section-pad {
+    @apply py-24 px-6;
+  }
+  .container-sm {
+    @apply max-w-3xl mx-auto;
+  }
+  .container-md {
+    @apply max-w-5xl mx-auto;
+  }
+}

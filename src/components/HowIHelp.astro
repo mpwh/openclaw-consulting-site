@@ -1,0 +1,43 @@
+---
+const services = [
+  {
+    num: '01',
+    title: 'Architecture',
+    desc: 'Which model, which configuration, which skills, which integrations. I map out the decisions that determine whether your assistant is useful or frustrating — then make them for you.',
+  },
+  {
+    num: '02',
+    title: 'Integration',
+    desc: 'Your email, calendar, CRM, Notion, messaging platforms, and databases. I connect every piece so your assistant knows your full business context.',
+  },
+  {
+    num: '03',
+    title: 'Optimization',
+    desc: 'The difference between a decent assistant and an exceptional one is in the tuning. Prompt engineering, skill setup, memory management, and model cost control.',
+  },
+  {
+    num: '04',
+    title: 'Security',
+    desc: 'Your assistant only accesses what you are comfortable with. I help you find the right balance between capability and security — locked down from day one.',
+  },
+];
+---
+
+<section class="section-pad border-t border-white/5">
+  <div class="container-md">
+    <p class="text-accent text-sm font-medium tracking-widest uppercase mb-4">How I Help</p>
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-16 max-w-2xl">
+      Everything your AI agent needs to actually work.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-px bg-white/5 rounded-2xl overflow-hidden">
+      {services.map((s) => (
+        <div class="bg-[#0a0a0a] p-8 hover:bg-surface2 transition-colors">
+          <span class="text-accent text-sm font-mono font-medium mb-4 block">{s.num}</span>
+          <h3 class="text-xl font-semibold mb-3">{s.title}</h3>
+          <p class="text-neutral-400 leading-relaxed text-sm">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
